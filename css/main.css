@@ -1,0 +1,16 @@
+:root {
+    --font-sans-serif: Equip, sans-serif;
+    --black: #1f2322;
+    --yellow: #fadf58;
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+img {
+    max-width: 100%;
+  }
