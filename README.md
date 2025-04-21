@@ -1,2 +1,2 @@
 # we-are-breakfast-case-study
-Case Study of We Are Breakfast for Web Dev
+Maribeth Romslo's Case Study of We Are Breakfast for Web Dev
