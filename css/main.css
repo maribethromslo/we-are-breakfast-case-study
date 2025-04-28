@@ -62,28 +62,26 @@ nav ul li a:hover {
   min-height: 100vh; 
   overflow: hidden;
   background-image: url('img/WeAreBreakfastFiles/sky@2x.jpg');
-  background-size: 166% auto; 
+  background-size: 100%;
   background-position: center top;
   background-repeat: no-repeat;
 }
 
 .hero-container img {
   position: absolute;
-  max-width: 100%;
   height: auto;
   display: block;
 }
 
 /* Sky Background */
-.hero__skybackground {
+.hero__background {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   min-height: 100vh;
   object-fit: cover;
-  z-index: 0;
-  position: relative;
-  overflow: hidden; 
+  z-index: -1;
 }
 
 /* Reflections */
@@ -91,15 +89,14 @@ nav ul li a:hover {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
-  z-index: 1;
+  width: 100vw;
   z-index: 1;
 }
 
 /* Hills */
 .hero__hills {
   position: absolute;
-  bottom: 10%;
+  bottom: 25%;
   left: 0;
   width: 100%;
   z-index: 4;
@@ -107,42 +104,44 @@ nav ul li a:hover {
 
 /* Gold Dial (spinning) */
 .hero__golddial {
-  bottom: 20%;
-  left: 60%;
-  width: 200px;
+  position: absolute;
+  bottom: 25%;
+  left: 55%;
+  width: 22%;
   animation: spin 20s linear infinite;
   z-index: 2;
 }
 
 /* Egg on top of dial */
 .hero__egg {
-  bottom: 22%;
-  left: 62%;
-  width: 150px;
+  position: absolute;
+  left: 57%;
+  bottom: 28%;
+  width: 18%;
   z-index: 3;
 }
 
 /* Tape on reflections, below egg/dial */
 .hero__cassettetape {
-  bottom: 2%;
-  left: 70%;
-  width: 300px;
+  bottom: 0;
+  left: 60%;
+  width: 375px;
   z-index: 5;
 }
 
 /* Switch on hills */
 .hero__switch {
-  bottom: 20%;
-  left: 30%;
-  width: 40px;
+  bottom: 35%;
+  left: 15%;
+  width: 4%;
   z-index: 5;
 }
 
 /* Sign on hills */
 .hero__sign {
-  bottom: 23%;
-  left: 40%;
-  width: 100px;
+  bottom: 40%;
+  left: 22%;
+  width: 15%;
   z-index: 5;
 }
 
@@ -150,40 +149,44 @@ nav ul li a:hover {
 .hero__raspberry1,
 .hero__raspberry2,
 .hero__raspberry3 {
-  bottom: 5%;
-  left: 10%;
-  width: 60px;
-  z-index: 3;
+  width: 125px;
+  z-index: 4;
   animation: swing 5s ease-in-out infinite;
   transform-origin: top center;
 }
 
+.hero__raspberry1 {
+  left: 5%;
+  bottom: 20%;
+}
 .hero__raspberry2 {
   left: 15%;
+  bottom: 12%;
   animation-delay: 1s;
 }
 
 .hero__raspberry3 {
-  left: 20%;
+  bottom: 20%;
+  left: 25%;
   animation-delay: 2s;
 }
 
 /* Logo */
 .hero__logo {
   top: 15%;
-  left: 50%;
+  left: 55%;
   transform: translateX(-50%);
-  width: 40%;
+  width: 60%;
   z-index: 5;
 }
 
 /* Egg Balloon floating up and down */
 .hero__eggballoon {
   top: 5%;
-  left: 30%;
-  width: 200px;
+  left: 15%;
+  width: 17%;
   animation: bounce 6s ease-in-out infinite;
-  z-index: 6;
+  z-index: 4;
 }
 
 /* Animations */
@@ -252,11 +255,11 @@ nav ul li a:hover {
 
 /* Hungry Sticker */
 
-    .hungry-sticker {
+    .hero__hungry-sticker {
       position: absolute;
       top: 20%;
-      right: 75%; 
-      width: 120px; 
+      right: 15%; 
+      width: 15%; 
       z-index: 3;
     }
     
