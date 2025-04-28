@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Components - Maribeth Romslo's Web Dev Case Study of We Are Breakfast</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -15,7 +16,7 @@
         <h2 class="component__section_name">Typography Defaults</h2>
 
         <article class="component">
-            <h3 class="component__name">Equip-Thin</h3>
+            <h3 class="component__name">Equip-Thin (but using close comp Montserrat for accessibility of font library) </h3>
 
                 <h4 class="component_description">Tagline above bacon (weight 100, size 65px)</h4>
                 <div class="component__image">
@@ -51,7 +52,7 @@
         </article>
 
         <article class="component">
-            <h3 class="component__name">Equip-Medium</h3>
+            <h3 class="component__name">Equip-Medium (but using close comp Montserrat for accessibility of font library) </h3>
 
                 <h4 class="component_description">Footer navigation (weight 500, size 20px)</h4>
                 <div class="component__image">
@@ -71,7 +72,7 @@
         </article>
 
         <article class="component">
-            <h3 class="component__name">Equip-Regular</h3>
+            <h3 class="component__name">Equip-Regular (but using close comp Montserrat for accessibility of font library) </h3>
 
                 <h4 class="component_description">Tagline in wave (weight 400, size 10px)</h4>
                 <div class="component__image">
@@ -83,7 +84,7 @@
         </article>
 
         <article class="component">
-            <h3 class="component__name">Equip-Bold</h3>
+            <h3 class="component__name">Equip-Bold (but using close comp Montserrat for accessibility of font library) </h3>
 
                 <h4 class="component_description">Navigation bar items (weight 700, size 18px)</h4>
                 <div class="component__image">
@@ -123,16 +124,16 @@
     <!-- Header Nav Bar -->
 
         <div class="navigation">
-            <h4 class="navigation_description">Header Nav Bar</h4>
+            <h4 class="navigation__description">Header Nav Bar</h4>
             <div class="navigation__code">
             <header>
                 <nav>
                   <ul>
-                    <li><a href="#">Latest Work</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
+                    <li><a href="https://wearebreakfast.com/latest-work">Latest Work</a></li>
+                    <li><a href="https://wearebreakfast.com/about">About</a></li>
+                    <li><a href="https://wearebreakfast.com/services">Services</a></li>
                     <li><a href="#">License Tracks</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="https://wearebreakfast.com/contact">Contact</a></li>
                   </ul>
                 </nav>
               </header>
@@ -141,206 +142,305 @@
 
     <!-- Breakfast Hero Images -->
 
-    <img class="hero__skybackground"
-      src="img/WeAreBreakfastFiles/sky@2x.jpg"
-      alt="colorful fantasy sky sunset"
-      srcset="img/WeAreBreakfastFiles/sky@2x.jpg 2x">
+    <div class="hero-container">
 
-    <img class="hero__logo" 
-      src="img/WeAreBreakfastFiles/logo.png" 
-      alt="logo featuring the word breakfast"
-      srcset="img/WeAreBreakfastFiles/logo.png">
+      <h4 class="hero-container__description">Hero Container</h4>
 
-    <img class="hero__eggballoon" 
-      src="img/WeAreBreakfastFiles/egg-balloon.png" 
-      alt="hot air balloon made of an eggshell"
-      srcset="img/WeAreBreakfastFiles/egg-balloon.png 2x">
+      <!-- Reflections (lower layer) -->
+        <img class="hero__background"
+          src="img/WeAreBreakfastFiles/sky@2x.jpg"
+          alt="fantasy sky sunset"
+          srcset="img/WeAreBreakfastFiles/sky@2x.jpg 2x">
+    
+      <!-- Reflections (lower layer) -->
+        <img class="hero__reflections"
+          src="img/WeAreBreakfastFiles/reflections.png"
+          alt="reflection of hills"
+          srcset="img/WeAreBreakfastFiles/reflections.png 2x">
+    
+      <!-- Hills (higher layer than reflections) -->
+        <img class="hero__hills"
+          src="img/WeAreBreakfastFiles/hills.png"
+          alt="hills" 
+          srcset="img/WeAreBreakfastFiles/hills.png 2x">
+    
+      <!-- Gold Dial (behind egg) -->
+        <img class="hero__golddial"
+          src="img/WeAreBreakfastFiles/dial-gold.png"
+          alt="gold dial"
+          srcset="img/WeAreBreakfastFiles/dial-gold.png 2x">
+    
+      <!-- Egg (in front of dial) -->
+        <img class="hero__egg"
+          src="img/WeAreBreakfastFiles/egg-1.png"
+          alt="fried egg"
+          srcset="img/WeAreBreakfastFiles/egg-1.png 2x">
+    
+      <!-- Tape (above reflections, but below egg/dial) -->
+        <img class="hero__cassettetape"
+          src="img/WeAreBreakfastFiles/tape.png"
+          alt="cassette tape"
+          srcset="img/WeAreBreakfastFiles/tape.png 2x">
+    
+      <!-- Switch and Sign (sitting on top of hills, under egg balloon) -->
+        <img class="hero__switch"
+          src="img/WeAreBreakfastFiles/switch.png"
+          alt="switch"
+          srcset="img/WeAreBreakfastFiles/switch.png 2x">
+      
+        <img class="hero__sign"
+          src="img/WeAreBreakfastFiles/sign-1.png"
+          alt="breakfast sign"
+          srcset="img/WeAreBreakfastFiles/sign-1.png 2x">
+    
+      <!-- Raspberries (over reflections, under egg balloon) -->
+        <img class="hero__raspberry1"
+          src="img/WeAreBreakfastFiles/raspberry-1.png"
+          alt="raspberry"
+          srcset="img/WeAreBreakfastFiles/raspberry-1.png 2x">
 
-    <img class="hero__egg" 
-      src="img/WeAreBreakfastFiles/egg-1.png" 
-      alt="fried egg"
-      srcset="img/WeAreBreakfastFiles/egg-1.png 2x">
+        <img class="hero__raspberry2" 
+          src="img/WeAreBreakfastFiles/raspberry-2.png"
+          alt="raspberry"
+          srcset="img/WeAreBreakfastFiles/raspberry-2.png 2x">
+      
+        <img class="hero__raspberry3" 
+          src="img/WeAreBreakfastFiles/raspberry-3.png" 
+          alt="raspberry" 
+          srcset="img/WeAreBreakfastFiles/raspberry-3.png 2x">
     
-    <img class="hero__golddial" 
-      src="img/WeAreBreakfastFiles/dial-gold.png" 
-      alt="gold dial"
-      srcset="img/WeAreBreakfastFiles/dial-gold.png 2x">
+      <!-- Logo -->
+        <img class="hero__logo"
+          src="img/WeAreBreakfastFiles/logo.png"
+          alt="logo featuring the word breakfast"
+          srcset="img/WeAreBreakfastFiles/logo.png">
     
-    <img class="hero__switch" 
-      src="img/WeAreBreakfastFiles/switch.png" 
-      alt="switch"
-      srcset="img/WeAreBreakfastFiles/switch.png 2x">
+      <!-- Egg Balloon (floating above everything) -->
+        <img class="hero__eggballoon"
+          src="img/WeAreBreakfastFiles/egg-balloon.png"
+          alt="hot air balloon made of an eggshell"
+          srcset="img/WeAreBreakfastFiles/egg-balloon.png 2x">
     
-    <img class="hero__mountains" 
-      src="img/WeAreBreakfastFiles/hills.png" 
-      alt="mountains"
-      srcset="img/WeAreBreakfastFiles/hills.png 2x">
-
-    <img class="hero__reflections" 
-      src="img/WeAreBreakfastFiles/reflections.png" 
-      alt="reflection of mountains"
-      srcset="img/WeAreBreakfastFiles/reflections.png 2x">
-    
-    <img class="hero__breakfast" 
-      src="img/WeAreBreakfastFiles/sign-1.png" 
-      alt="breakfast word"
-      srcset="img/WeAreBreakfastFiles/sign-1.png 2x">
-    
-    <img class="hero__raspberry1" 
-      src="img/WeAreBreakfastFiles/raspberry-1.png" 
-      alt="raspberry"
-      srcset="img/WeAreBreakfastFiles/raspberry-1.png 2x">
-    
-    <img class="hero__raspberry2" 
-      src="img/WWeAreBreakfastFiles/raspberry-2.png" 
-      alt="raspberry"
-      srcset="img/WeAreBreakfastFiles/raspberry-2.png 2x">
-    
-    <img class="hero__raspberry3" 
-      src="img/WeAreBreakfastFiles/raspberry-3.png" 
-      alt="raspberry"
-      srcset="img/WeAreBreakfastFiles/raspberry-3.png 2x">
-    
-    <img class="hero__cassettetape" 
-      src="img/WeAreBreakfastFiles/tape.png" 
-      alt="cassette tape"
-      srcset="img/WeAreBreakfastFiles/tape.png 2x">
+    </div>
   
 
     <!-- Tagline Wave -->
 
-        <section class="hero">
+    <h4 class="tagline-wave__description">Tagline Wave + About Sections</h4>
 
-          <h2>BREAKFAST IS REMIXING THE INGREDIENTS<br>
-            OF THE TRAILER MUSIC WORLD.</h2>
+    <div class="tagline-gradient-background">
 
-          <img class="hero__hungrysticker"
-              src="img/WeAreBreakfastFiles/hungry-for-more-sticker.png"
-              alt="gold shiny sticker that reads hungry for more?"
-              srcset="img/WeAreBreakfastFiles/hungry-for-more-sticker.png 2x">
+      <section class="tagline-wave">
+        <div class="pink-noodle">
+          <div class="tagline-wave__text">
+            <h2 class="tagline-remixing">
+            BREAKFAST IS REMIXING THE INGREDIENTS OF THE TRAILER MUSIC WORLD.
+            </h2>
+          </div>
 
+        </div>
+
+        <img class="hero__hungrysticker"
+          src="img/WeAreBreakfastFiles/hungry-for-more-sticker.png"
+          alt="gold shiny sticker that reads hungry for more?"
+          srcset="img/WeAreBreakfastFiles/hungry-for-more-sticker.png 2x">
         </section>
+
     
     <!-- About with Bacon and Drumsticks -->
 
         <section class="about">
           
-          <h2>We've pulled the best hip hop, indie, and rock producers from the record business and reprogrammed them for the trailer music world.</h2>
-          
-          <img class="hero__drumhands"
-            src="img/WeAreBreakfastFiles/hands.png"
-            alt="hands holding drumsticks"
-            srcset="img/WeAreBreakfastFiles/hands.png 2x">  
+          <h2 class="tagline-reprogrammed">WE'VE PULLED THE BEST HIP HOP, INDIE, AND ROCK PRODUCERS FROM THE RECORD BUSINESS AND REPROGRAMMED THEM FOR THE TRAILER MUSIC WORLD.</h2>
 
-          <img class="hero__bacon"
-            src="img/WeAreBreakfastFiles/bacon.png"
-            alt="bacon"
-            srcset="img/WeAreBreakfastFiles/bacon.png 2x">
+          <div class="about-images">
+
+            <img class="hero__bacon"
+              src="img/WeAreBreakfastFiles/bacon.png"
+              alt="bacon"
+              srcset="img/WeAreBreakfastFiles/bacon.png 2x">
+
+            <img class="hero__drumhands"
+              src="img/WeAreBreakfastFiles/hands.png"
+              alt="hands holding drumsticks"
+              srcset="img/WeAreBreakfastFiles/hands.png 2x">  
+
+          </div>  
 
         </section>
+    </div>
 
      <!-- Work Section -->
         
+     <h4 class="work__description">Work + Contact Sections</h4>
+
+     <div class="work-contact-gradient-background">
+
         <section class="work">
-
-          <h3>Work<br>
-            Work <br>
-            Work <br>
-            Work <br>
-          </h3>
           
-          <img class="work-item__tenet" 
-            src="img/WeAreBreakfastFiles/hand.png" 
-            alt="finger pointing"
-            srcset="img/WeAreBreakfastFiles/hand.png 2x">
-          
-          <img class="work-item__rosedonut" 
-            src="img/WeAreBreakfastFiles/rose.png" 
-            alt="rose with a donut around stem"
-            srcset="img/WeAreBreakfastFiles/rose.png 2x">
 
-          <h2>Our sound is unlike anything else because we're not using everyone else.</h2>
+            <h2>Work<br>
+              Work <br>
+              Work <br>
+              Work <br>
+            </h2>
             
-          <p class="latest-work-ticker">Latest Work Latest Work Latest Work</p>
+            <div class="work-header-images">
 
-            <div class="work-grid">
+              <img class="work-item__rosedonut" 
+                src="img/WeAreBreakfastFiles/rose.png" 
+                alt="rose with a donut around stem"
+                srcset="img/WeAreBreakfastFiles/rose.png 2x">
 
-              <div class="work-item">
-                <img class="work-item__tenet"
-                    src="img/WeAreBreakfastFiles/tenet-poster-breakfast.jpeg"
-                    alt="Tenet movie poster"
-                    srcset="img/WeAreBreakfastFiles/tenet-poster-breakfast.jpeg 2x">
-              </div>
-
-              <div class="work-item">
-                <img class="work-item__lupin"
-                    src="img/WeAreBreakfastFiles/lupin-netflix-poster-breakfast.jpeg"
-                    alt="Lupin movie poster"
-                    srcset="img/WeAreBreakfastFiles/lupin-netflix-poster-breakfast.jpeg 2x">
-              </div>
-
-              <div class="work-item">
-                <img class="work-item__blackladysketchshow"
-                    src="img/WeAreBreakfastFiles/a-black-lady-sketch-show-poster-breakfast.jpeg"
-                    alt="Black Lady Sketch Show movie poster"
-                    srcset="img/WeAreBreakfastFiles/a-black-lady-sketch-show-poster-breakfast.jpeg 2x">
-              </div>
-
-              <div class="work-item">
-                <img class="work-item__falconwintersoldier"
-                    src="img/WeAreBreakfastFiles/falcon-winter-soldier-poster-breakfast.jpeg"
-                    alt="Falcon Winter Soldier movie poster"
-                    srcset="img/WeAreBreakfastFiles/falcon-winter-soldier-poster-breakfast.jpeg 2x">
-              </div>
-
-              <div class="work-item">
-                <img class="work-item__chaoswalking"
-                    src="img/WeAreBreakfastFiles/chaos-walking-poster-breakfast.jpeg"
-                    alt="Chaos Walking movie poster"
-                    srcset="img/WeAreBreakfastFiles/chaos-walking-poster-breakfast.jpeg 2x">
-              </div>
-
-              <div class="work-item">
-                <img class="work-item__moonknight"
-                    src="img/WeAreBreakfastFiles/moonknight-poster-breakfast.jpeg"
-                    alt="Moonknight movie poster"
-                    srcset="img/WeAreBreakfastFiles/moonknight-poster-breakfast.jpeg 2x">
-              </div>
+              <img class="work-item__hand" 
+                src="img/WeAreBreakfastFiles/hand.png" 
+                alt="finger pointing"
+                srcset="img/WeAreBreakfastFiles/hand.png 2x">
 
             </div>
 
-          <p class="latest-work-ticker">Latest Work Latest Work Latest Work</p>    
+            <h2 class="tagline-our-sound">Our sound is unlike anything else because we're not using everyone else.</h2>
             
-        </section>
+            <div class="ticker-container">
+              <p class="latest-work-ticker">
+                LATEST WORK&nbsp;&nbsp;LATEST WORK&nbsp;&nbsp;LATEST WORK&nbsp;&nbsp;LATEST WORK&nbsp;&nbsp;LATEST WORK&nbsp;&nbsp;LATEST WORK&nbsp;&nbsp;LATEST WORK&nbsp;&nbsp;LATEST WORK&nbsp;&nbsp;LATEST WORK
+              </p>
+            </div>
+
+              <div class="work-grid">
+                <div class="work-track">
+                
+                  <!-- First 6 posters-->
+                <div class="work-item">
+                  <img class="work-item__tenet"
+                      src="img/WeAreBreakfastFiles/tenet-poster-breakfast.jpeg"
+                      alt="Tenet movie poster"
+                      srcset="img/WeAreBreakfastFiles/tenet-poster-breakfast.jpeg 2x">
+                </div>
+
+                <div class="work-item">
+                  <img class="work-item__lupin"
+                      src="img/WeAreBreakfastFiles/lupin-netflix-poster-breakfast.jpeg"
+                      alt="Lupin movie poster"
+                      srcset="img/WeAreBreakfastFiles/lupin-netflix-poster-breakfast.jpeg 2x">
+                </div>
+
+                <div class="work-item">
+                  <img class="work-item__blackladysketchshow"
+                      src="img/WeAreBreakfastFiles/a-black-lady-sketch-show-poster-breakfast.jpeg"
+                      alt="Black Lady Sketch Show movie poster"
+                      srcset="img/WeAreBreakfastFiles/a-black-lady-sketch-show-poster-breakfast.jpeg 2x">
+                </div>
+
+                <div class="work-item">
+                  <img class="work-item__falconwintersoldier"
+                      src="img/WeAreBreakfastFiles/falcon-winter-soldier-poster-breakfast.jpeg"
+                      alt="Falcon Winter Soldier movie poster"
+                      srcset="img/WeAreBreakfastFiles/falcon-winter-soldier-poster-breakfast.jpeg 2x">
+                </div>
+
+                <div class="work-item">
+                  <img class="work-item__chaoswalking"
+                      src="img/WeAreBreakfastFiles/chaos-walking-poster-breakfast.jpeg"
+                      alt="Chaos Walking movie poster"
+                      srcset="img/WeAreBreakfastFiles/chaos-walking-poster-breakfast.jpeg 2x">
+                </div>
+
+                <div class="work-item">
+                  <img class="work-item__moonknight"
+                      src="img/WeAreBreakfastFiles/moonknight-poster-breakfast.jpeg"
+                      alt="Moonknight movie poster"
+                      srcset="img/WeAreBreakfastFiles/moonknight-poster-breakfast.jpeg 2x">
+                </div>
+
+                <!-- Second 6 posters-->
+
+                <div class="work-item">
+                  <img class="work-item__moonknight"
+                      src="img/WeAreBreakfastFiles/moonknight-poster-breakfast.jpeg"
+                      alt="Moonknight movie poster"
+                      srcset="img/WeAreBreakfastFiles/moonknight-poster-breakfast.jpeg 2x">
+                </div>
+
+                <div class="work-item">
+                  <img class="work-item__chaoswalking"
+                      src="img/WeAreBreakfastFiles/chaos-walking-poster-breakfast.jpeg"
+                      alt="Chaos Walking movie poster"
+                      srcset="img/WeAreBreakfastFiles/chaos-walking-poster-breakfast.jpeg 2x">
+                </div>
+
+                <div class="work-item">
+                  <img class="work-item__falconwintersoldier"
+                      src="img/WeAreBreakfastFiles/falcon-winter-soldier-poster-breakfast.jpeg"
+                      alt="Falcon Winter Soldier movie poster"
+                      srcset="img/WeAreBreakfastFiles/falcon-winter-soldier-poster-breakfast.jpeg 2x">
+                </div>
+
+                <div class="work-item">
+                  <img class="work-item__blackladysketchshow"
+                      src="img/WeAreBreakfastFiles/a-black-lady-sketch-show-poster-breakfast.jpeg"
+                      alt="Black Lady Sketch Show movie poster"
+                      srcset="img/WeAreBreakfastFiles/a-black-lady-sketch-show-poster-breakfast.jpeg 2x">
+                </div>
+
+                <div class="work-item">
+                  <img class="work-item__lupin"
+                      src="img/WeAreBreakfastFiles/lupin-netflix-poster-breakfast.jpeg"
+                      alt="Lupin movie poster"
+                      srcset="img/WeAreBreakfastFiles/lupin-netflix-poster-breakfast.jpeg 2x">
+                </div>
+
+                <div class="work-item">
+                  <img class="work-item__tenet"
+                      src="img/WeAreBreakfastFiles/tenet-poster-breakfast.jpeg"
+                      alt="Tenet movie poster"
+                      srcset="img/WeAreBreakfastFiles/tenet-poster-breakfast.jpeg 2x">
+                </div>
+              </div>
+            </div>
+
+            <div class="ticker-container">
+              <p class="latest-work-ticker">
+                LATEST WORK&nbsp;&nbsp;LATEST WORK&nbsp;&nbsp;LATEST WORK&nbsp;&nbsp;LATEST WORK&nbsp;&nbsp;LATEST WORK&nbsp;&nbsp;LATEST WORK&nbsp;&nbsp;LATEST WORK&nbsp;&nbsp;LATEST WORK&nbsp;&nbsp;LATEST WORK
+              </p>
+            </div>  
+            
+      </section>
 
     <!-- Get In Touch -->
-        
+      
+
         <section class="contact">
-        
+
           <h2>Get In Touch<br>
             Get In Touch<br>
             Get In Touch <br>
             Get In Touch <br>
           </h2>
 
-          <img class="contact__diver"
-            src="img/WeAreBreakfastFiles/diver.png" 
-            alt="retro diver in a bathing suit"
-            srcset="img/WeAreBreakfastFiles/diver.png 2x">
-          
-          <img class="contact__handmug"
-            src="img/WeAreBreakfastFiles/hand-mug.png" 
-            alt="hand holding an orange mug"
-            srcset="img/WeAreBreakfastFiles/hand-mug.png 2x">
+          <div class="contact-images">
+            <img class="contact__diver"
+              src="img/WeAreBreakfastFiles/diver.png" 
+              alt="retro diver in a bathing suit"
+              srcset="img/WeAreBreakfastFiles/diver.png 2x">
+            
+            <img class="contact__handmug"
+              src="img/WeAreBreakfastFiles/hand-mug.png" 
+              alt="hand holding an orange mug"
+              srcset="img/WeAreBreakfastFiles/hand-mug.png 2x">
 
-          <img class="contact__hollywood"
-            src="img/WeAreBreakfastFiles/hollywood.png" 
-            alt="Hollywood hills"
-            srcset="img/WeAreBreakfastFiles/hollywood.png 2x">
+            <img class="contact__hollywood"
+              src="img/WeAreBreakfastFiles/hollywood.png" 
+              alt="Hollywood hills"
+              srcset="img/WeAreBreakfastFiles/hollywood.png 2x">
+          </div>
         </section>
 
+      </div>
 
     <!-- Footer -->
+
+      <h4 class="footer__description">Footer Section</h4>
 
           <footer class="footer">
             <div class="footer-inner">
@@ -370,8 +470,8 @@
                 <div class="footer-col">
                   <h4>Socials</h4>
                   <p>
-                    <a href="#">Instagram</a><br>
-                    <a href="#">Vimeo</a>
+                    <a href="https://www.instagram.com/breakfastsounds/">Instagram</a><br>
+                    <a href="https://vimeo.com/user107052138">Vimeo</a>
                   </p>
                 </div>
               </div>

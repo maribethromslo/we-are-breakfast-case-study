@@ -1,7 +1,14 @@
 :root {
-    --font-sans-serif: Equip, sans-serif;
+    --font-sans-serif: Montserrat, sans-serif;
     --black: #1f2322;
     --yellow: #fadf58;
+    --dark-pink: #dda0a0;
+    --medium-pink: #d1a4ac;
+    --light-pink: #ecc2cf;
+    --light-blue: #a8b5d9;  
+    --light-purple: #bbb7d7;
+    --sky-blue: #86a2cb;
+
 }
 
 html {
@@ -15,22 +22,472 @@ img {
     max-width: 100%;
   }
 
+h1, h2, h3, h4, h5, p {
+  font-family: var(--font-sans-serif, 'Montserrat', sans-serif);
+}
 
-/* Images */
+/* Nav Header */
 
+.navigation {
+  font-family: var(--font-sans-serif, Montserrat, sans-serif);
+}
+
+nav ul {
+  display: flex; 
+  gap: 30px; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  font-family: var(--font-sans-serif, Montserrat, sans-serif);
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fadf58;
+  transition: color 0.3s ease; 
+  font-weight: 700; 
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+/* Hero Section */
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; 
+  overflow: hidden;
+  background-image: url('img/WeAreBreakfastFiles/sky@2x.jpg');
+  background-size: 166% auto; 
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.hero-container img {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Sky Background */
+.hero__skybackground {
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  position: relative;
+  overflow: hidden; 
+}
+
+/* Reflections */
+.hero__reflections {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  z-index: 1;
+}
+
+/* Hills */
+.hero__hills {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+/* Gold Dial (spinning) */
+.hero__golddial {
+  bottom: 20%;
+  left: 60%;
+  width: 200px;
+  animation: spin 20s linear infinite;
+  z-index: 2;
+}
+
+/* Egg on top of dial */
+.hero__egg {
+  bottom: 22%;
+  left: 62%;
+  width: 150px;
+  z-index: 3;
+}
+
+/* Tape on reflections, below egg/dial */
+.hero__cassettetape {
+  bottom: 2%;
+  left: 70%;
+  width: 300px;
+  z-index: 5;
+}
+
+/* Switch on hills */
+.hero__switch {
+  bottom: 20%;
+  left: 30%;
+  width: 40px;
+  z-index: 5;
+}
+
+/* Sign on hills */
+.hero__sign {
+  bottom: 23%;
+  left: 40%;
+  width: 100px;
+  z-index: 5;
+}
+
+/* Raspberries pinned to reflections */
+.hero__raspberry1,
+.hero__raspberry2,
+.hero__raspberry3 {
+  bottom: 5%;
+  left: 10%;
+  width: 60px;
+  z-index: 3;
+  animation: swing 5s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+.hero__raspberry2 {
+  left: 15%;
+  animation-delay: 1s;
+}
+
+.hero__raspberry3 {
+  left: 20%;
+  animation-delay: 2s;
+}
+
+/* Logo */
 .hero__logo {
-  background: lightgray;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  z-index: 5;
 }
 
-.hero__breakfast {
-  background: lightgray;
+/* Egg Balloon floating up and down */
+.hero__eggballoon {
+  top: 5%;
+  left: 30%;
+  width: 200px;
+  animation: bounce 6s ease-in-out infinite;
+  z-index: 6;
 }
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes swing {
+  0% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  100% { transform: rotate(5deg); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} 
+
+/* Tagline Wave and About Sections */
+
+    .tagline-gradient-background {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background: linear-gradient(
+        to bottom right,
+        #bfaabe 0%,
+        #d1a4ac 50%,
+        #acbdcb 100%
+      );
+      padding: 80px 20px;
+      overflow: hidden;
+    }
+
+/* Tagline + Wave Section */
+    .tagline-wave {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+/* The pink wave ("noodle") */
+    .pink-noodle {
+      position: relative;
+      width: 120%;
+      height: 150px;
+      background: #ecc2cf; /* Light pink */
+      border-radius: 50% 20% / 10% 40%;
+      margin-left: -10%;
+      animation: wobbleNoodle 8s ease-in-out infinite alternate;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    @keyframes wobbleNoodle {
+      0% { transform: translateX(0) scaleX(1); }
+      50% { transform: translateX(-3%) scaleX(1.05); }
+      100% { transform: translateX(0) scaleX(1); }
+    }
+
+/* Hungry Sticker */
+
+    .hungry-sticker {
+      position: absolute;
+      top: 20%;
+      right: 75%; 
+      width: 120px; 
+      z-index: 3;
+    }
+    
+/* Centered Tagline Text */
+    .tagline-remixing {
+      font-family: var(--font-sans-serif, 'Montserrat', sans-serif);
+      color: black;
+      font-weight: 500; 
+      text-transform: uppercase; 
+      letter-spacing: 1px;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      text-align: center;
+      position: relative;
+      width: 50vw;
+      margin: 0 auto;
+      z-index: 2;
+    }
+
+    .tagline-reprogrammed {
+      font-family: var(--font-sans-serif, 'Montserrat', sans-serif);
+      color: white;
+      font-weight: 200; 
+      text-transform: uppercase; 
+      letter-spacing: 1px;
+      font-size: 350%;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+/* About */
+
+
+/* Work */
+
+  .work-contact-gradient-background {
+      position: relative; 
+      width: 100%;
+      min-height: 100vh; 
+      background: linear-gradient(
+        to bottom,
+        #dda0a0 0%,
+        #bcb7d7 40%,
+        #82a0c9 100%
+      );
+      padding: 80px 20px;
+      overflow: hidden; 
+      }
+
+      .tagline-our-sound {
+        font-family: var(--font-sans-serif, 'Montserrat', sans-serif);
+        color: black;
+        font-weight: 200; 
+        text-transform: uppercase; 
+        letter-spacing: 1px;
+        font-size: 350%;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+
+      .work-header-images {
+        display: flex;
+        grid-template-columns: 1.5fr 1fr;
+        width: 100vw;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }
+      
+      .work-item__rosedonut {
+        width: 60%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      
+      .work-item__hand {
+        width: 40%;
+        height: 40%;
+        object-fit: cover;
+        display: block;
+        animation: slideInHand 2s ease-out 0.5s forwards;
+      }
+      
+      /* Hand Animation */
+      @keyframes slideInHand {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      /* Latest Work Ticker Right to Left Movement */
+
+      .ticker-container {
+        width: 100vw;
+        height: 40px;
+        overflow: hidden;
+        background-color: black;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+      }
+      
+      /* Moving ticker text */
+
+      .latest-work-ticker {
+        display: inline-block;
+        font-family: var(--font-sans-serif, Montserrat, sans-serif);
+        letter-spacing: 1px;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: white;
+        padding: 0;
+        animation: ticker-scroll 20s linear infinite;
+      }
+      
+      @keyframes ticker-scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Movie Image Carousel */
+
+      .work-grid {
+        overflow: hidden;
+        width: 100%;
+        padding: 10px 0;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      
+      .work-track {
+        display: flex;
+        flex-direction: row; 
+        width: max-content;
+        animation: scroll-work 60s linear infinite;
+        gap: 10px;
+      }
+      
+      .work-item img,
+      .work-track img {
+        height: 250px;
+        flex-shrink: 0;
+        object-fit: cover;
+      }
+      
+      @keyframes scroll-work {
+        0% {
+          transform: translateX(-50%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }   
+
+/* Contact */
+
+    .contact {
+      position: relative;
+      text-align: center;
+      padding: 100px 0;
+      overflow: hidden;
+    }
+
+    .contact__description {
+      margin-bottom: 20px;
+    }
+
+    .contact-images {
+      position: relative;
+      width: 100vw;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .contact__hollywood {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      height: auto;
+      z-index: 1;
+    }
+
+    .contact__handmug {
+      position: absolute;
+      bottom: 40%;
+      left: 0;
+      width: 50vw;
+      height: auto;
+      z-index: 2;
+    }
+
+    .contact__diver {
+      position: absolute;
+      left: 300px;
+      height: 50vh;
+      z-index: 3;
+      animation: jumpIntoMug 3s ease-in-out infinite alternate;
+    }
+
+/* Diver Animation */
+
+@keyframes jumpIntoMug {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-50px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
 
 /* Footer */
 
 .footer {
   background-color: #f7d950;
-  font-family: Special Gothic, Arial, sans-serif;
+  font-family: Montserrat, sans-serif;
   color: #000;
   padding: 40px 60px;
   font-size: 14px;
@@ -112,7 +569,7 @@ img {
 }
 
 .footer-copy {
-  font-family: Special Gothic;
+  font-family: Montserrat;
   opacity: 75%;
   color: black;  
   max-width: 60%;
@@ -123,7 +580,7 @@ img {
 }
 
 .footer-credits strong {
-  font-family: Special Gothic Condensed One;
+  font-family: Montserrat;
   font-weight: bold;
   color: #000;
 }
