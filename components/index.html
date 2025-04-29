@@ -24,7 +24,6 @@
                         src="img/WeAreBreakfast_AboveBaconTagline.png" alt="Website typography example"
                         srcset="img/WeAreBreakfast_AboveBaconTagline.png 2x">
                 </div>
-                <div class="component__code">Code Goes Here</div>
 
                 <h4 class="component_description">Tagline under rose finger (weight 100, size 65px)</h4>
                 <div class="component__image">
@@ -32,7 +31,6 @@
                         src="img/WeAreBreakfast_BelowRoseTagline.png" alt="Website typography example"
                         srcset="img/WeAreBreakfast_BelowRoseTagline.png 2x">
                 </div>
-                <div class="component__code">Code Goes Here</div>
 
                 <h4 class="component_description">Footer address, email, socials (weight 100, size 14px)</h4>
                 <div class="component__image">
@@ -40,7 +38,6 @@
                         src="img/WeAreBreakfast_FooterAddressSocialsEmail.png" alt="Website typography example"
                         srcset="img/WeAreBreakfast_FooterAddressSocialsEmail.png 2x">
                 </div>
-                <div class="component__code">Code Goes Here</div>
 
                 <h4 class="component_description">Footer copyright (weight 100, size 12px)</h4>
                 <div class="component__image">
@@ -48,7 +45,6 @@
                         src="img/WeAreBreakfast_FooterCopyright.png" alt="Website typography example"
                         srcset="img/WeAreBreakfast_FooterCopyright.png 2x">
                 </div>
-                <div class="component__code">Code Goes Here</div>
         </article>
 
         <article class="component">
@@ -60,7 +56,6 @@
                         src="img/WeAreBreakfast_Footer_Menu.png" alt="Website typography example"
                         srcset="img/WeAreBreakfast_Footer_Menu.png 2x">
                 </div>
-                <div class="component__code">Code Goes Here</div>
 
                 <h4 class="component_description">Footer column headers (weight 500, 14px)</h4>
                 <div class="component__image">
@@ -68,7 +63,6 @@
                         src="img/WeAreBreakfast_FooterColumnHeaders.png" alt="Website typography example"
                         srcset="img/WeAreBreakfast_FooterColumnHeaders.png 2x">
                 </div>
-                <div class="component__code">Code Goes Here</div>
         </article>
 
         <article class="component">
@@ -80,7 +74,6 @@
                         src="img/WeAreBreakfast_Homepage_Tagline.png" alt="Website typography example"
                         srcset="img/WeAreBreakfast_Homepage_Tagline.png 2x">
                 </div>
-                <div class="component__code">Code Goes Here</div>
         </article>
 
         <article class="component">
@@ -92,7 +85,6 @@
                         src="img/WeAreBreakfast_About_NavBar.png" alt="Website typography example"
                         srcset="img/WeAreBreakfast_About_NavBar.png 2x">
                 </div>
-                <div class="component__code">Code Goes Here</div>
 
                 <h4 class="component_description">Work animation (weight 700, size 70px)</h4>
                 <div class="component__image">
@@ -100,7 +92,6 @@
                         src="img/WeAreBreakfast_WorkText.png" alt="Website typography example"
                         srcset="img/WeAreBreakfast_WorkText.png 2x">
                 </div>
-                <div class="component__code">Code Goes Here</div>
 
                 <h4 class="component_description">Latest Work ticker (weight 700, size 20px)</h4>
                 <div class="component__image">
@@ -108,7 +99,6 @@
                         src="img/WeAreBreakfast_TickerText.png" alt="Website typography example"
                         srcset="img/WeAreBreakfast_TickerText.png 2x">
                 </div>
-                <div class="component__code">Code Goes Here</div>
 
                 <h4 class="component_description">Get In Touch animation (weight 700, size 70px)</h4>
                 <div class="component__image">
@@ -116,7 +106,6 @@
                         src="img/WeAreBreakfast_GetInTouchText.png" alt="Website typography example"
                         srcset="img/WeAreBreakfast_GetInTouchText.png 2x">
                 </div>
-                <div class="component__code">Code Goes Here</div>
         </article>
 
     <h2 class="component__section_name">Components</h2>
@@ -146,10 +135,14 @@
 
     <div class="hero-container">
 
-      <img class="hero__background"
-          src="img/WeAreBreakfastFiles/sky@2x.jpg"
-          alt="fantasy sky sunset"
-          srcset="img/WeAreBreakfastFiles/sky@2x.jpg 2x">
+      <div class="hero__skybackground">
+
+        <img class="hero__background"
+            src="img/WeAreBreakfastFiles/sky@2x.jpg"
+            alt="fantasy sky sunset"
+            srcset="img/WeAreBreakfastFiles/sky@2x.jpg 2x">
+      
+      </div>
 
       <!-- Reflections (lower layer) -->
 
@@ -231,12 +224,12 @@
     <div class="tagline-gradient-background">
 
       <section class="tagline-wave">
-        <div class="pink-noodle">
-          <div class="tagline-wave__text">
-            <h2 class="tagline-remixing">
-            BREAKFAST IS REMIXING THE INGREDIENTS OF THE TRAILER MUSIC WORLD.
-            </h2>
-          </div>
+        <div class="pink-noodle-container">
+                
+            <div class="tagline-wave__text">
+              <h2 class="tagline-remixing">
+              BREAKFAST IS REMIXING THE INGREDIENTS OF THE TRAILER MUSIC WORLD.
+              </h2>
 
         </div>
 
@@ -244,7 +237,8 @@
           src="img/WeAreBreakfastFiles/hungry-for-more-sticker.png"
           alt="gold shiny sticker that reads hungry for more?"
           srcset="img/WeAreBreakfastFiles/hungry-for-more-sticker.png 2x">
-        </section>
+          
+      </section>
 
     
     <!-- About with Bacon and Drumsticks -->
@@ -277,13 +271,13 @@
      <div class="work-contact-gradient-background">
 
         <section class="work">
-          
 
-            <h2>Work<br>
-              Work <br>
-              Work <br>
-              Work <br>
-            </h2>
+          <h2 class="work-heading">
+            <span class="work-item1">WORK</span><br>
+            <span class="work-item2">WORK</span><br>
+            <span class="work-item3">WORK</span><br>
+            <span class="work-item4">WORK</span><br>
+          </h2>
             
             <div class="work-header-images">
 
@@ -412,10 +406,11 @@
 
         <section class="contact">
 
-          <h2>Get In Touch<br>
-            Get In Touch<br>
-            Get In Touch <br>
-            Get In Touch <br>
+          <h2 class="contact-heading">
+            <span class="contact-item1">GET IN TOUCH</span><br>
+            <span class="contact-item2">GET IN TOUCH</span><br>
+            <span class="contact-item3">GET IN TOUCH</span><br>
+            <span class="contact-item4">GET IN TOUCH</span><br>
           </h2>
 
           <div class="contact-images">
