@@ -9,6 +9,11 @@
     --light-purple: #bbb7d7;
     --sky-blue: #86a2cb;
 
+    window.addEventListener('scroll', () => {
+      document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+    }, false); /* Sourced from CSS-Tricks, thanks Scott Kellum! */
+    
+
 }
 
 html {
@@ -225,6 +230,18 @@ nav ul li a:hover {
       z-index: -1;
     }
 
+    .wave-wrapper {
+      animation: floatWave 4s ease-in-out infinite;
+      will-change: transform;
+      position: relative;
+      top: 80px;
+    }
+    
+    @keyframes floatWave {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
 /* Tagline + Wave Section */
     .tagline-wave {
       position: relative;
@@ -237,10 +254,12 @@ nav ul li a:hover {
     }
 
     .tagline-wave__text {
-      position: relative;
+      position: absolute;
       z-index: 2;
+      right: 22%;
+      top: 50%;
       text-align: center;
-      width:
+      max-width: 70%;
     }
 
 /* The pink wave ("noodle") */
@@ -249,25 +268,49 @@ nav ul li a:hover {
       position: absolute;
       width: 100%;
       height: 180px;
-      top: 50%;
+      top: 80%;
       transform: translateY(-50%);
       background: #ecc2cf; 
-      animation: wobbleNoodle 8s ease-in-out infinite alternate;
       overflow: hidden;
       z-index: 1;
     }
 
-    @keyframes wobbleNoodle {
-      0% { transform: translateX(0) scaleX(1); }
-      50% { transform: translateX(-3%) scaleX(1.05); }
-      100% { transform: translateX(0) scaleX(1); }
+    .tagline-wave__pink-noodle-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .tagline-wave__pink-noodle-wrapper svg {
+      width: 115%;
+      display: block;
+      height: auto;
+    }
+
+    #wave-home {
+      animation: waveMotion 6s ease-in-out infinite;
+      transform-origin: center;
+    }
+    
+    @keyframes waveMotion {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
     }
 
 /* Hungry Sticker */
 
     .hero__hungry-sticker {
       position: absolute;
-      top: 20%;
+      top: 60%;
       right: 15%; 
       width: 15%; 
       z-index: 4;
@@ -315,18 +358,23 @@ nav ul li a:hover {
     .hero__bacon {
       position: absolute;
       bottom: 0;
-      width: 70%;
+      width: 60%;
       z-index: 1;
-      animation: moveBaconAndHands 15s ease-in-out forwards; 
+      margin: 0;
+      animation: moveBaconAndHands 10s ease-in-out forwards;
+      animation-play-state: paused;
+      animation-delay: calc(var(--scroll) * -1s); 
     }
 
     /* Positioning of the hands */
     .hero__drumhands {
       position: absolute;
-      bottom: 2cap; 
-      width: 70%;
+      bottom: 0; 
+      width: 60%;
       z-index: 2;
-      animation: moveBaconAndHands 15s ease-in-out forwards; 
+      animation: moveBaconAndHands 10s ease-in-out forwards; 
+      animation-play-state: paused;
+      animation-delay: calc(var(--scroll) * -1s);
     }
 
     /* Keyframes for the movement */
