@@ -131,7 +131,7 @@ nav ul li a:hover {
 .hero__cassettetape {
   bottom: 0;
   left: 60%;
-  width: 375px;
+  width: 275px;
   z-index: 5;
 }
 
@@ -215,10 +215,10 @@ nav ul li a:hover {
 /* Tagline Wave and About Sections */
 
     .tagline-gradient-background {
-      position: relative;
       margin-top: -22%;
       width: 100%;
       min-height: 100vh;
+      padding-bottom: 300px;
       background: linear-gradient(
         to bottom right,
         #bfaabe 0%,
@@ -239,7 +239,7 @@ nav ul li a:hover {
     
     @keyframes floatWave {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(10px); }
+      50% { transform: translateY(20px); }
     }
 
 /* Tagline + Wave Section */
@@ -281,6 +281,7 @@ nav ul li a:hover {
       align-items: center;
       justify-content: center;
       height: 100%;
+      margin: 0;
     }
 
     .tagline-wave__pink-noodle-wrapper svg {
@@ -315,6 +316,22 @@ nav ul li a:hover {
       width: 15%; 
       z-index: 4;
     }
+
+    .hungry-link {
+      position: absolute;
+      top: 60%;
+      right: 15%;
+      width: 15%;
+      z-index: 5;
+      display: block;
+    }
+    
+    .hungry-link img {
+      width: 100%;
+      height: auto;
+      display: block;
+      cursor: pointer;
+    }
     
 /* Centered Tagline Text */
     .tagline-remixing {
@@ -346,12 +363,19 @@ nav ul li a:hover {
 /* About */
 
     /* Bacon and Hands Animation */
+
+    .about-spacer {
+      height: 300px;
+    }
       .about-images {
-        position: relative;
+        position: absolute;
+        bottom: 0;
+        left: 0;
         display: flex;
         justify-content: flex-start;
         gap: 10px;
         animation: moveBaconAndHands 15s ease-in-out forwards;
+        z-index: 3;
       }
 
     /* Positioning of the bacon */
