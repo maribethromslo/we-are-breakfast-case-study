@@ -22,6 +22,10 @@ html {
     box-sizing: inherit;
   }
 
+body {
+  margin: 0;
+}  
+
 img {
     max-width: 100%;
   }
@@ -363,8 +367,8 @@ nav ul li a:hover {
       font-size: 350%;
       letter-spacing: 1px;
       text-align: center;
-      margin-left: 20px;
-      margin-right: 20px;
+      margin-left: 50px;
+      margin-right: 50px;
     }
 
 /* About */
@@ -452,6 +456,8 @@ nav ul li a:hover {
         font-size: 350%;
         letter-spacing: 1px;
         text-align: center;
+        margin-left: 50px;
+        margin-right: 50px;
       }
 
       /* Work Header */
