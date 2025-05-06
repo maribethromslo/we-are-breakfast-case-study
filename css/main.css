@@ -238,7 +238,7 @@ nav ul li a:hover {
       z-index: -1;
     }
 
-    .wave-wrapper {
+    .tagline-wave__pink-noodle-container {
       animation: floatWave 4s ease-in-out infinite;
       will-change: transform;
       position: relative;
@@ -252,6 +252,7 @@ nav ul li a:hover {
 
 
 /* Tagline + Wave Section */
+
     .tagline-wave {
       position: relative;
       width: 100%;
@@ -266,7 +267,7 @@ nav ul li a:hover {
       position: absolute;
       z-index: 2;
       right: 22%;
-      top: 50%;
+      top: 22%;
       text-align: center;
       max-width: 60%;
     }
@@ -319,8 +320,8 @@ nav ul li a:hover {
 /* Hungry Sticker */
 
     .hero__hungry-sticker {
-      position: absolute;
-      top: 45%;
+      position: realative;
+      top: 22%;
       right: 10%; 
       width: 15%; 
       z-index: 4;
@@ -328,7 +329,7 @@ nav ul li a:hover {
 
     .hungry-link {
       position: absolute;
-      top: 45%;
+      top: 22%;
       right: 10%;
       width: 15%;
       z-index: 5;
@@ -390,7 +391,7 @@ nav ul li a:hover {
         justify-content: flex-start;
         align-items: flex-end;
         gap: 10px;
-        animation: moveBaconAndHands 15s ease-in-out forwards;
+        animation: moveBaconAndHands 10s ease-in-out forwards;
         z-index: 3;
       }
 
@@ -403,7 +404,6 @@ nav ul li a:hover {
       object-fit: contain;
       animation: moveBaconAndHands 10s ease-in-out forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--scroll) * -1s); 
     }
 
     /* Positioning of the hands */
@@ -416,13 +416,12 @@ nav ul li a:hover {
       z-index: 2;
       animation: moveBaconAndHands 10s ease-in-out forwards; 
       animation-play-state: paused;
-      animation-delay: calc(var(--scroll) * -1s);
     }
 
     /* Keyframes for the movement */
     @keyframes moveBaconAndHands {
       0% {
-        transform: translateX(-100%); 
+        transform: translateX(-50%); 
       }
       50% {
         transform: translateX(50%);
@@ -475,6 +474,47 @@ nav ul li a:hover {
         height: 45px;
       }
 
+
+
+                /* Work Header Initially hide all items */
+                .work-heading__work-item1, .work-heading__work-item2, .work-heading__work-item3, .work-heading__work-item4 {
+                  opacity: 0; 
+                  transform: translateY(20px); 
+                  animation: fadeInUp 1s ease-in-out infinite alternate;
+                  animation-delay: 0s; 
+                  
+                }
+                
+                /* Animation for each contact item */
+                @keyframes fadeInUp {
+                  0% {
+                    opacity: 0;
+                    transform: translateY(20px);
+                  }
+                  100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                  }
+                }
+                
+                /* Specific delays for each item */
+                .work-heading__work-item1 {
+                  animation-delay: 0s; 
+                }
+                
+                .work-heading__work-item2 {
+                  animation-delay: 0.5s; 
+                }
+                
+                .work-heading__work-item3 {
+                  animation-delay: 1s; 
+                }
+                
+                .work-heading__work-item4 {
+                  animation-delay: 1.5s; 
+                }
+                
+    
        /* Work Images */
 
        .work-heading-images {
@@ -499,7 +539,7 @@ nav ul li a:hover {
         height: 40%;
         object-fit: cover;
         display: block;
-        animation: slideInHand 2s ease-out 0.5s forwards;
+        animation: slideInHand 2s ease-in-out infinite alternate;
       }
       
       /* Hand Animation */
@@ -511,6 +551,7 @@ nav ul li a:hover {
           transform: translateX(0);
         }
       }
+
 
       /* Latest Work Ticker Right to Left Movement */
 
@@ -590,11 +631,27 @@ nav ul li a:hover {
       overflow: hidden;
     }
 
+    .contact-spacer {
+      height: 450px;
+    }
+
     .contact__description {
       margin-bottom: 20px;
     }
           /* Contact Header */
 
+          .contact {
+            position: relative;
+            text-align: center;
+            padding: 0;
+            overflow: hidden;
+          }
+          
+          .contact__description {
+            margin-bottom: 20px;
+          }
+          
+          /* Contact Header */
           .contact-heading__animated-text {
             font-family: var(--font-sans-serif, 'Montserrat', sans-serif);
             font-size: 2.5em;
@@ -607,13 +664,48 @@ nav ul li a:hover {
             padding-left: 30px;
             padding-top: 30px;
           }
-    
-
-          .contact-item1, .contact-item2, .contact-item3, .contact-item4 {
-            color: transparent;
-            -webkit-text-stroke: 1px #fff;
+          
+          /* Initially hide all items */
+          .contact-item1, .contact-item2, .contact-item3, .contact-item4, .contact-item5 {
+            opacity: 0; 
+            transform: translateY(20px); 
+            animation: fadeInUp 1s ease-in-out infinite alternate;
+            animation-delay: 0s; 
+            
           }
-
+          
+          /* Animation for each contact item */
+          @keyframes fadeInUp {
+            0% {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          
+          /* Specific delays for each item */
+          .contact-item1 {
+            animation-delay: 0s; 
+          }
+          
+          .contact-item2 {
+            animation-delay: 0.5s; 
+          }
+          
+          .contact-item3 {
+            animation-delay: 1s; 
+          }
+          
+          .contact-item4 {
+            animation-delay: 1.5s; 
+          }
+          
+          .contact-item5 {
+            animation-delay: 2s; 
+          }
 
     .contact-images {
       position: relative;
@@ -644,9 +736,9 @@ nav ul li a:hover {
     }
 
     .contact__diver {
-      position: absolute;
+      position: relative;
       top: 0;
-      right: 10%; 
+      right: 0; 
       height: 50vh;
       z-index: 3;
       animation: moveDiverDown 5s ease-in-out infinite alternate;
@@ -655,13 +747,13 @@ nav ul li a:hover {
     /* Diver animation */
     @keyframes moveDiverDown {
       0% {
-        transform: translateX(100vw) translateY(0) rotate(45deg); 
+        transform: translateX(80vw) translateY(0) rotate(45deg); 
       }
       50% {
-        transform: translateX(0) translateY(30vh) rotate(20deg); 
+        transform: translateX(0) translateY(20vh) rotate(20deg); 
       }
       100% {
-        transform: translateX(-30vw) translateY(50vh) rotate(0deg); 
+        transform: translateX(0) translateY(40vh) rotate(0deg); 
       }
     }
 
