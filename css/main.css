@@ -9,10 +9,6 @@
     --light-purple: #bbb7d7;
     --sky-blue: #86a2cb;
 
-    window.addEventListener('scroll', () => {
-      document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-    }, false); /* Sourced from CSS-Tricks, thanks Scott Kellum! */
-
 }
 
 html {
